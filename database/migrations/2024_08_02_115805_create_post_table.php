@@ -1,4 +1,5 @@
 <?php
+// Command to create this file: php artisan make:migration create_post_table
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -13,6 +14,8 @@ return new class extends Migration
     {
         Schema::create('post', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('message');
             $table->timestamps();
         });
     }
